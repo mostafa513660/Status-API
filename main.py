@@ -29,4 +29,6 @@ def toggle_status():
     return jsonify({'status': status})
 
 if __name__ == '__main__':
+    print(get_host_ip())
     app.run(host=host_ip, port=5000, debug=True)
+    
