@@ -30,5 +30,5 @@ def toggle_status():
 
 if __name__ == '__main__':
     print(get_host_ip())
-    app.run(host=host_ip, port=5000, debug=True)
+    app.run(host=get_host_ip(), port=5000, debug=True)
     
