@@ -1,17 +1,11 @@
-from flask import Flask, jsonify
+from flask import Flask
 
 app = Flask(__name__)
-api_status = True
 
-@app.route('/api/status', methods=['GET'])
-def get_api_status():
-    return jsonify({'status': api_status})
-
-@app.route('/api/toggle', methods=['POST'])
-def toggle_api_status():
-    global api_status
-    api_status = not api_status
-    return jsonify({'status': api_status})
+@app.route('/check_api', methods=['GET'])
+def check_api():
+    result = True
+    return str(result)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0')
