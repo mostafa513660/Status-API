@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 @app.route('/check_api', methods=['GET'])
 def check_api():
-    # Add your logic here, e.g., always return True
     result = True
     return str(result)
 
